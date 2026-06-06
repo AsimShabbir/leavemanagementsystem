@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Management System</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <div class="brand-icon">L</div>
+                    <div class="brand-name">LeaveSystem<span>Admin Portal</span></div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section-label">Master Data</div>
+                <a href="#companies" class="nav-link" data-route="companies">
+                    <span class="nav-icon">🏢</span> Companies
+                </a>
+                <a href="#leave-types" class="nav-link" data-route="leave-types">
+                    <span class="nav-icon">🏷️</span> Leave Types
+                </a>
+                <a href="#employee-categories" class="nav-link" data-route="employee-categories">
+                    <span class="nav-icon">👥</span> Emp Categories
+                </a>
+                <a href="#grades" class="nav-link" data-route="grades">
+                    <span class="nav-icon">⭐</span> Grades
+                </a>
+                <a href="#departments" class="nav-link" data-route="departments">
+                    <span class="nav-icon">🏢</span> Departments
+                </a>
+                <div class="nav-section-label" style="margin-top: 16px;">Policies</div>
+                <a href="#leave-policies" class="nav-link" data-route="leave-policies">
+                    <span class="nav-icon">📜</span> Leave Policies
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                v1.0.0 &copy; 2026
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="main">
+            <!-- Topbar -->
+            <header id="topbar">
+                <div class="topbar-title">Dashboard</div>
+                <div class="topbar-right">
+                    <span class="server-dot"></span>
+                    <span class="topbar-badge">Admin</span>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div id="page-content">
+                <!-- Content gets injected here by router -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals & Overlays -->
+    <div id="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2 id="modal-title">Title</h2>
+                <button class="modal-close-btn" id="modal-close">&times;</button>
+            </div>
+            <div id="modal-body"></div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modal-cancel">Cancel</button>
+                <button class="btn btn-primary" id="modal-submit">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirm-overlay">
+        <div class="confirm-box">
+            <h3>Confirm Action</h3>
+            <div id="confirm-message">Are you sure?</div>
+            <div class="confirm-actions">
+                <button class="btn btn-secondary" id="confirm-cancel">Cancel</button>
+                <button class="btn btn-danger" id="confirm-ok">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/router.js"></script>
+    
+    <!-- Modules -->
+    <script src="assets/js/modules/companies.js"></script>
+    <script src="assets/js/modules/leaveTypes.js"></script>
+    <script src="assets/js/modules/employeeCategories.js"></script>
+    <script src="assets/js/modules/grades.js"></script>
+    <script src="assets/js/modules/departments.js"></script>
+    <script src="assets/js/modules/leavePolicies.js"></script>
+
+    <!-- Init -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            router.init();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "watch": ["."],
+  "ext": "js",
+  "ignore": ["data.json", "node_modules", "*.md"]
+}

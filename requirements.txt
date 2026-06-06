@@ -1,0 +1,21 @@
+# ============================================================
+# Leave Management System - Node.js Requirements
+# ============================================================
+# This project uses Node.js (not Python).
+# Install all dependencies by running:
+#   npm install
+#
+# Node.js version: >= 14.x recommended
+# ============================================================
+
+# ─── Runtime Dependencies ───────────────────────────────────
+express@^4.18.2       # Fast, minimalist web framework for Node.js (REST API server)
+cors@^2.8.5           # Enables Cross-Origin Resource Sharing (CORS) middleware
+
+# ─── Development Dependencies ───────────────────────────────
+nodemon@^3.0.1        # Auto-restarts server on file changes during development
+
+# ─── Scripts ────────────────────────────────────────────────
+# npm start       → Start production server  (node server.js)
+# npm run dev     → Start dev server         (nodemon server.js)
+# npm run seed    → Seed initial data        (node seed.js)
