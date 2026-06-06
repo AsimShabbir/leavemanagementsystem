@@ -21,7 +21,7 @@ package-lock.json
 # ===========================
 # Data / Database Files
 # ===========================
-data.json
+# data.json
 
 # ===========================
 # Logs

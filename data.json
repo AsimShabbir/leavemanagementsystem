@@ -1,0 +1,111 @@
+{
+  "companies": [
+    { "id": 1, "name": "Magnic Digital Pvt. Ltd.", "code": "MAGNIC", "created_at": "2024-01-01T00:00:00.000Z" },
+    { "id": 2, "name": "Tech Solutions Ltd.", "code": "TECHSOL", "created_at": "2024-01-01T00:00:00.000Z" }
+  ],
+  "leaveTypes": [
+    { "id": 1, "Company_id": 1, "code": "CL", "name": "Casual Leave", "description": "Short-term personal leave.", "category": "casual", "sort_order": 1, "is_paid": true, "is_active": true },
+    { "id": 2, "Company_id": 1, "code": "SL", "name": "Sick Leave", "description": "Leave due to illness.", "category": "sick", "sort_order": 2, "is_paid": true, "is_active": true },
+    { "id": 3, "Company_id": 1, "code": "EL", "name": "Earned Leave", "description": "Leave earned based on days worked.", "category": "earned", "sort_order": 3, "is_paid": true, "is_active": true },
+    { "id": 4, "Company_id": 1, "code": "ML", "name": "Maternity Leave", "description": "Leave for new mothers.", "category": "maternity", "sort_order": 4, "is_paid": true, "is_active": true },
+    { "id": 5, "Company_id": 1, "code": "UL", "name": "Unpaid Leave", "description": "Leave without pay.", "category": "unpaid", "sort_order": 5, "is_paid": false, "is_active": true }
+  ],
+  "employeeCategories": [
+    { "id": 1, "company_id": 1, "name": "Corporate",    "description": "Office-based salaried employees.", "is_active": true, "created_at": "2024-01-01T00:00:00.000Z" },
+    { "id": 2, "company_id": 1, "name": "Workers",      "description": "Factory or field workers.",         "is_active": true, "created_at": "2024-01-01T00:00:00.000Z" },
+    { "id": 3, "company_id": 1, "name": "Contractual",  "description": "Short-term contract employees.",   "is_active": true, "created_at": "2024-01-01T00:00:00.000Z" }
+  ],
+  "grades": [
+    { "id": 1, "company_id": 1, "name": "Grade A", "description": "Senior management level.", "is_active": true, "created_at": "2024-01-01T00:00:00.000Z" },
+    { "id": 2, "company_id": 1, "name": "Grade B", "description": "Mid-level staff.",          "is_active": true, "created_at": "2024-01-01T00:00:00.000Z" },
+    { "id": 3, "company_id": 1, "name": "Grade C", "description": "Junior staff.",             "is_active": true, "created_at": "2024-01-01T00:00:00.000Z" }
+  ],
+  "departments": [
+    { "id": 1, "company_id": 1, "name": "Human Resources", "description": "HR and recruitment team.", "is_active": true, "created_at": "2024-01-01T00:00:00.000Z" },
+    { "id": 2, "company_id": 1, "name": "Sales",           "description": "Sales and marketing.",     "is_active": true, "created_at": "2024-01-01T00:00:00.000Z" },
+    { "id": 3, "company_id": 1, "name": "Operations",      "description": "Field operations team.",   "is_active": true, "created_at": "2024-01-01T00:00:00.000Z" }
+  ],
+  "leavePolicies": [
+    {
+      "id": 1,
+      "company_id": 1,
+      "leave_type_id": 1,
+      "employee_category_id": 1,
+      "grade_id": null,
+      "department_id": null,
+      "default_days": 12,
+      "max_days_per_year": 12,
+      "max_consecutive_days": 3,
+      "min_notice_days": 1,
+      "min_service_days": 90,
+      "allow_half_day": true,
+      "allow_negative_balance": false,
+      "negative_balance_limit": 0,
+      "is_carry_forward": false,
+      "carry_forward_limit": 0,
+      "carry_forward_expiry_days": null,
+      "is_encashable": false,
+      "encash_limit_days": 0,
+      "requires_document": false,
+      "document_required_after_days": 0,
+      "is_gender_specific": false,
+      "applicable_gender": null,
+      "is_accrual": false,
+      "is_active": true
+    },
+    {
+      "id": 2,
+      "company_id": 1,
+      "leave_type_id": 2,
+      "employee_category_id": null,
+      "grade_id": null,
+      "department_id": null,
+      "default_days": 10,
+      "max_days_per_year": 10,
+      "max_consecutive_days": 5,
+      "min_notice_days": 0,
+      "min_service_days": 0,
+      "allow_half_day": false,
+      "allow_negative_balance": false,
+      "negative_balance_limit": 0,
+      "is_carry_forward": false,
+      "carry_forward_limit": 0,
+      "carry_forward_expiry_days": null,
+      "is_encashable": false,
+      "encash_limit_days": 0,
+      "requires_document": true,
+      "document_required_after_days": 2,
+      "is_gender_specific": false,
+      "applicable_gender": null,
+      "is_accrual": false,
+      "is_active": true
+    },
+    {
+      "id": 3,
+      "company_id": 1,
+      "leave_type_id": 4,
+      "employee_category_id": null,
+      "grade_id": null,
+      "department_id": null,
+      "default_days": 90,
+      "max_days_per_year": 90,
+      "max_consecutive_days": 90,
+      "min_notice_days": 30,
+      "min_service_days": 180,
+      "allow_half_day": false,
+      "allow_negative_balance": false,
+      "negative_balance_limit": 0,
+      "is_carry_forward": false,
+      "carry_forward_limit": 0,
+      "carry_forward_expiry_days": null,
+      "is_encashable": false,
+      "encash_limit_days": 0,
+      "requires_document": true,
+      "document_required_after_days": 0,
+      "is_gender_specific": true,
+      "applicable_gender": "female",
+      "is_accrual": false,
+      "is_active": true
+    }
+  ]
+}
